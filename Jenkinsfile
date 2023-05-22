@@ -45,7 +45,7 @@ pipeline {
                     sh "docker pull $imageName"
                     sh "docker stop $containerName || true"
                     sh "docker rm $containerName || true"
-                    sh "docker run -d -p 8538:80 --name $containerName $imageName"
+                    sh "docker run -d -p 9090:80 --name $containerName $imageName"
                 }
             }
         }
